@@ -43,6 +43,7 @@ function unitscan.target(name)
 	SetCVar('Sound_EnableAllSound', sound_setting)
 	if forbidden then
 		if not found[name] then
+			SendChatMessage("WORLD BOSS " .. name .. " HAS SPAWNED", "GUILD")
 			found[name] = true
 			unitscan.play_sound()
 			unitscan.flash.animation:Play()
